@@ -47,20 +47,21 @@ public class studentGradeCalculator {
         }
 
         // Display Results in a Table-like Structure
+        System.out.println("--------------------------------------------------------------");
         System.out.println("\nResults:");
-        System.out.println("-------------------------------------------------");
+        System.out.println("--------------------------------------------------------------");
         System.out.printf("| %-15s | %-10s |\n", "Subject", "Marks");
-        System.out.println("-------------------------------------------------");
+        System.out.println("--------------------------------------------------------------");
 
         for (int i = 0; i < numberOfSubjects; i++) {
             System.out.printf("| %-15s | %-10d |\n", subjectNames[i], subjectMarks[i]);
+            System.out.println("--------------------------------------------------------------");
         }
 
-        System.out.println("-------------------------------------------------");
         System.out.printf("| %-15s | %-10d |\n", "Total Marks", totalMarks);
         System.out.printf("| %-15s | %-10.2f%% |\n", "Average Percentage", averagePercentage);
         System.out.printf("| %-15s | %-10s |\n", "Grade", grade);
-        System.out.println("-------------------------------------------------");
+        System.out.println("--------------------------------------------------------------");
 
         scanner.close();
     }
