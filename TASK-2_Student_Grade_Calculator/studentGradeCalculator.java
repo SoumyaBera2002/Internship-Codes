@@ -5,34 +5,34 @@ public class studentGradeCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input: Take the number of subjects
+
         System.out.print("Enter the number of subjects: ");
         int numberOfSubjects = scanner.nextInt();
 
-        // Array to store subject names and marks
+
         String[] subjectNames = new String[numberOfSubjects];
         int[] subjectMarks = new int[numberOfSubjects];
 
-        // Input: Take subject names and marks
+
         for (int i = 0; i < numberOfSubjects; i++) {
             System.out.print("Enter the name of subject " + (i + 1) + ": ");
-            scanner.nextLine(); // consume the newline character
+            scanner.nextLine();
             subjectNames[i] = scanner.nextLine();
 
-            System.out.print("Enter marks for subject " + subjectNames[i] + ": ");
+            System.out.print("Enter marks(should be between 0-100) for subject " + subjectNames[i] + ": ");
             subjectMarks[i] = scanner.nextInt();
         }
 
-        // Calculate Total Marks
+
         int totalMarks = 0;
         for (int marks : subjectMarks) {
             totalMarks += marks;
         }
 
-        // Calculate Average Percentage
+
         double averagePercentage = (double) totalMarks / numberOfSubjects;
 
-        // Grade Calculation
+
         char grade;
         if (averagePercentage >= 90) {
             grade = 'A';
@@ -46,7 +46,7 @@ public class studentGradeCalculator {
             grade = 'F';
         }
 
-        // Display Results in a Table-like Structure
+
         System.out.println("--------------------------------------------------------------");
         System.out.println("\nResults:");
         System.out.println("--------------------------------------------------------------");
